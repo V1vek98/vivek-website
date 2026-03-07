@@ -1,0 +1,15 @@
+{
+  "_comment": "Copy this to settings.local.json for personal overrides. This file is gitignored.",
+  "env": {
+    "ANTHROPIC_MODEL": "claude-sonnet-4-5-20250929",
+    "ANTHROPIC_SMALL_FAST_MODEL": "claude-haiku-4-5-20251001",
+    "MAX_THINKING_TOKENS": "10000",
+    "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "0"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(docker:*)",
+      "Bash(kubectl:*)"
+    ]
+  }
+}

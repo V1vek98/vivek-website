@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nInitial commit: Claude Code best practices template\n\nProduction-ready template with CLAUDE.md, hooks \\(block-dangerous, validate-write,\nauto-format, pre-commit-validate\\), skills \\(TDD, code-review, security-audit,\ndoc-and-clear\\), agents \\(code-reviewer, researcher, refactorer\\), slash commands\n\\(catchup, review, deploy-check, plan, explain, test-gen, refactor\\), progressive\ndisclosure docs, and setup scripts for Windows and Linux/Mac.\nEOF\n\\)\")",
+      "Bash(gh auth:*)",
+      "Bash(where:*)",
+      "Bash(winget install:*)",
+      "Bash(export PATH=\"$PATH:/c/Program Files/GitHub CLI\")",
+      "Bash(gh repo create:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "WebFetch(domain:vivek.ooo)",
+      "Bash(npx react-scripts:*)",
+      "Bash(npx create-react-app:*)",
+      "Bash(mkdir:*)",
+      "Bash(mv .claude:*)",
+      "Bash(npm install:*)",
+      "Bash(npx tailwindcss:*)",
+      "Bash(npm start:*)",
+      "Bash(npm run:*)"
+    ]
+  }
+}
