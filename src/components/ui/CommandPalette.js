@@ -50,6 +50,15 @@ export default function CommandPalette({ isOpen, onClose }) {
       case 'navigate':
         window.location.href = cmd.path;
         break;
+      case 'easter-egg':
+        if (cmd.egg === 'party') {
+          document.body.classList.toggle('party-mode');
+          setTimeout(() => document.body.classList.remove('party-mode'), 5000);
+        } else if (cmd.egg === 'sql') {
+          const el = document.getElementById('about');
+          el?.scrollIntoView({ behavior: 'smooth' });
+        }
+        break;
       default:
         break;
     }

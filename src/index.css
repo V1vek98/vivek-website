@@ -139,6 +139,15 @@ body {
   color: var(--text-primary);
 }
 
+/* Party mode easter egg */
+.party-mode {
+  animation: party-hue 0.5s linear infinite;
+}
+@keyframes party-hue {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
 /* Dot grid pattern */
 .dot-grid {
   background-image: radial-gradient(circle, #94A3B8 1px, transparent 1px);

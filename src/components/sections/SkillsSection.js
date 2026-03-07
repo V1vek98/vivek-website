@@ -6,7 +6,7 @@ import Section from '../layout/Section';
 import { skillCategories, radarSkills } from '../../config/data';
 import { fadeInUp } from '../../utils/animations';
 
-const filters = ['All', 'Languages', 'Frameworks', 'Data & Analytics', 'Cloud & DevOps'];
+const filters = ['All', 'Languages', 'Frameworks', 'Data & Analytics'];
 const proficiencyColor = (p) => p >= 85 ? '#34A853' : p >= 70 ? '#4285F4' : p >= 50 ? '#FBBC05' : '#EA4335';
 
 export default function SkillsSection() {

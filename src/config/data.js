@@ -286,19 +286,9 @@ export const skillCategories = [
       { name: "PowerBI", proficiency: 92, years: 3 },
       { name: "Tableau", proficiency: 85, years: 3 },
       { name: "PostgreSQL", proficiency: 85, years: 4 },
+      { name: "OracleDB", proficiency: 78, years: 3 },
+      { name: "MongoDB", proficiency: 75, years: 2 },
       { name: "Recharts", proficiency: 80, years: 2 },
-      { name: "Salesforce", proficiency: 75, years: 2 },
-    ],
-  },
-  {
-    name: "Tools & DevOps",
-    icon: "cloud",
-    skills: [
-      { name: "Azure DevOps", proficiency: 80, years: 3 },
-      { name: "Git", proficiency: 90, years: 5 },
-      { name: "PyPDF2", proficiency: 78, years: 2 },
-      { name: "Selenium", proficiency: 75, years: 2 },
-      { name: "Mantine UI", proficiency: 80, years: 2 },
     ],
   },
 ];
@@ -434,23 +424,23 @@ export const sidebarLinks = [
 // ---------------------------------------------------------------------------
 export const commandPaletteCommands = [
   // Navigation
-  { id: "nav-home", label: "Go to Home", icon: "Home", action: "scroll", group: "Navigation" },
-  { id: "nav-about", label: "Go to About", icon: "User", action: "scroll", group: "Navigation" },
-  { id: "nav-skills", label: "Go to Skills", icon: "Cpu", action: "scroll", group: "Navigation" },
-  { id: "nav-experience", label: "Go to Experience", icon: "Briefcase", action: "scroll", group: "Navigation" },
-  { id: "nav-projects", label: "Go to Projects", icon: "FolderKanban", action: "scroll", group: "Navigation" },
-  { id: "nav-contact", label: "Go to Contact", icon: "Mail", action: "scroll", group: "Navigation" },
+  { id: "nav-home", label: "Go to Home", icon: "Home", action: "scroll", target: "hero", group: "Navigation" },
+  { id: "nav-about", label: "Go to About", icon: "User", action: "scroll", target: "about", group: "Navigation" },
+  { id: "nav-skills", label: "Go to Skills", icon: "Cpu", action: "scroll", target: "skills", group: "Navigation" },
+  { id: "nav-experience", label: "Go to Experience", icon: "Briefcase", action: "scroll", target: "experience", group: "Navigation" },
+  { id: "nav-projects", label: "Go to Projects", icon: "FolderKanban", action: "scroll", target: "projects", group: "Navigation" },
+  { id: "nav-contact", label: "Go to Contact", icon: "Mail", action: "scroll", target: "contact", group: "Navigation" },
 
   // Actions
-  { id: "act-resume", label: "Download Resume", icon: "Download", action: "download", group: "Actions" },
-  { id: "act-email", label: "Send Email", icon: "Mail", action: "mailto", group: "Actions" },
-  { id: "act-linkedin", label: "Open LinkedIn", icon: "Linkedin", action: "external", group: "Actions" },
-  { id: "act-github", label: "Open GitHub", icon: "Github", action: "external", group: "Actions" },
+  { id: "act-resume", label: "Download Resume", icon: "Download", action: "download", target: "/Vivek Patel Resume.pdf", group: "Actions" },
+  { id: "act-email", label: "Send Email", icon: "Mail", action: "mailto", target: "mailto:vspatel360@gmail.com", group: "Actions" },
+  { id: "act-linkedin", label: "Open LinkedIn", icon: "Linkedin", action: "external", target: "https://www.linkedin.com/in/vspatel360", group: "Actions" },
+  { id: "act-github", label: "Open GitHub", icon: "Github", action: "external", target: "https://github.com/V1vek98", group: "Actions" },
   { id: "act-dashboards", label: "View Dashboards", icon: "BarChart2", action: "navigate", path: "/dashboards", group: "Actions" },
 
   // Easter Eggs
-  { id: "egg-party", label: "Toggle Party Mode", icon: "PartyPopper", action: "easter-egg", group: "Easter Eggs" },
-  { id: "egg-sql", label: "Run SELECT * FROM vivek", icon: "Database", action: "easter-egg", group: "Easter Eggs" },
+  { id: "egg-party", label: "Toggle Party Mode", icon: "PartyPopper", action: "easter-egg", egg: "party", group: "Easter Eggs" },
+  { id: "egg-sql", label: "Run SELECT * FROM vivek", icon: "Database", action: "easter-egg", egg: "sql", group: "Easter Eggs" },
 ];
 
 // ---------------------------------------------------------------------------
@@ -478,7 +468,6 @@ export const footerContent = {
   builtWith:
     "Built with React, Tailwind CSS, and an mass amounts of coffee",
   journey: [
-    { city: "Portsmouth", flag: "GB" },
     { city: "London", flag: "GB" },
     { city: "Augusta", flag: "US" },
   ],
