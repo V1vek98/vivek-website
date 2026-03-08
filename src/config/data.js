@@ -306,116 +306,13 @@ export const radarSkills = [
 ];
 
 // ---------------------------------------------------------------------------
-// 9. Projects
-// ---------------------------------------------------------------------------
-export const projects = [
-  {
-    id: 1,
-    title: "Real-Time Operations Dashboard",
-    category: "dashboard",
-    featured: true,
-    oneLiner: "Because staring at spreadsheets is so 2010",
-    description:
-      "End-to-end operations analytics platform with real-time KPI tracking, predictive staffing models, and automated alerting. Replaced 150+ manual Excel reports.",
-    technologies: ["Python", "Power BI", "SQL Server", "Azure Functions"],
-    metrics: [
-      { label: "Reports Replaced", value: "150+" },
-      { label: "Time Saved", value: "16hrs/week" },
-      { label: "Accuracy", value: "99.2%" },
-    ],
-    previewType: "bars",
-    github: null,
-    live: null,
-    color: "#4285F4",
-  },
-  {
-    id: 2,
-    title: "NLP Sentiment Analyzer",
-    category: "ml",
-    featured: false,
-    oneLiner: "Teaching machines to understand feelings (ironic, I know)",
-    description:
-      "Machine learning pipeline for social media sentiment analysis using NLP. Features custom BERT fine-tuning, real-time streaming, and interactive visualizations.",
-    technologies: ["Python", "TensorFlow", "NLTK", "Flask", "D3.js"],
-    metrics: [
-      { label: "Accuracy", value: "89%" },
-      { label: "Data Points", value: "100K+" },
-      { label: "Languages", value: "3" },
-    ],
-    previewType: "nodes",
-    github: "https://github.com/V1vek98",
-    live: null,
-    color: "#EA4335",
-  },
-  {
-    id: 3,
-    title: "Supply Chain Optimizer",
-    category: "data",
-    featured: false,
-    oneLiner:
-      "Making sure your packages arrive before you forget you ordered them",
-    description:
-      "Predictive analytics system for supply chain optimization. Uses time-series forecasting to predict demand, optimize inventory, and identify bottlenecks.",
-    technologies: ["Python", "Pandas", "Prophet", "PostgreSQL", "React"],
-    metrics: [
-      { label: "Forecast Accuracy", value: "94%" },
-      { label: "Cost Reduction", value: "18%" },
-      { label: "Lead Time", value: "-25%" },
-    ],
-    previewType: "nodes",
-    github: "https://github.com/V1vek98",
-    live: null,
-    color: "#34A853",
-  },
-  {
-    id: 4,
-    title: "E-Commerce Platform",
-    category: "fullstack",
-    featured: false,
-    oneLiner: "Full-stack retail therapy, minus the therapy bills",
-    description:
-      "Full-featured e-commerce platform with inventory management, payment processing, analytics dashboard, and recommendation engine.",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe", "Redis"],
-    metrics: [
-      { label: "Daily Transactions", value: "1000+" },
-      { label: "Uptime", value: "99.9%" },
-      { label: "Load Time", value: "<2s" },
-    ],
-    previewType: "bars",
-    github: "https://github.com/V1vek98",
-    live: null,
-    color: "#FBBC05",
-  },
-  {
-    id: 5,
-    title: "Automated Reporting Engine",
-    category: "data",
-    featured: true,
-    oneLiner: "I automated myself out of my own job (sort of)",
-    description:
-      "Python-based ETL pipeline that automates data extraction, transformation, and report generation. Schedules, validates, and distributes reports across the organization.",
-    technologies: ["Python", "Airflow", "SQL", "Jinja2", "SMTP"],
-    metrics: [
-      { label: "Reports/Day", value: "50+" },
-      { label: "Error Rate", value: "<0.1%" },
-      { label: "Recipients", value: "200+" },
-    ],
-    previewType: "map",
-    github: null,
-    live: null,
-    color: "#4285F4",
-  },
-];
-
-// ---------------------------------------------------------------------------
-// 10. Sidebar Links
+// 9. Sidebar Links
 // ---------------------------------------------------------------------------
 export const sidebarLinks = [
   { id: "hero", label: "Home", icon: "Home" },
   { id: "about", label: "About", icon: "User" },
   { id: "skills", label: "Skills", icon: "Cpu" },
   { id: "experience", label: "Experience", icon: "Briefcase" },
-  { id: "projects", label: "Projects", icon: "FolderKanban" },
   { id: "contact", label: "Contact", icon: "Mail" },
 ];
 
@@ -428,7 +325,6 @@ export const commandPaletteCommands = [
   { id: "nav-about", label: "Go to About", icon: "User", action: "scroll", target: "about", group: "Navigation" },
   { id: "nav-skills", label: "Go to Skills", icon: "Cpu", action: "scroll", target: "skills", group: "Navigation" },
   { id: "nav-experience", label: "Go to Experience", icon: "Briefcase", action: "scroll", target: "experience", group: "Navigation" },
-  { id: "nav-projects", label: "Go to Projects", icon: "FolderKanban", action: "scroll", target: "projects", group: "Navigation" },
   { id: "nav-contact", label: "Go to Contact", icon: "Mail", action: "scroll", target: "contact", group: "Navigation" },
 
   // Actions
@@ -512,7 +408,6 @@ export const easterEggs = {
     "LOADING BIO...",
     "PARSING SKILLS...",
     "FETCHING EXPERIENCE...",
-    "RENDERING PROJECTS...",
     "ESTABLISHING CONNECTION...",
     "QUERY: 100% COMPLETE",
   ],
