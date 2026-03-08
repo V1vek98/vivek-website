@@ -62,7 +62,8 @@ export default function SkillsSection() {
             className="glass-card p-6 rounded-xl"
           >
             <h3 className="text-sm font-medium text-content-tertiary uppercase tracking-wider mb-4">Skill Radar</h3>
-            <ResponsiveContainer width="100%" height={300}>
+            <div className="h-[220px] sm:h-[300px]">
+            <ResponsiveContainer width="100%" height="100%">
               <RadarChart data={radarSkills}>
                 <PolarGrid stroke="#E2E8F0" />
                 <PolarAngleAxis dataKey="axis" tick={{ fontSize: 12, fill: '#475569' }} />
@@ -76,6 +77,7 @@ export default function SkillsSection() {
                 />
               </RadarChart>
             </ResponsiveContainer>
+            </div>
           </motion.div>
 
           {/* Bar chart & heatmap */}

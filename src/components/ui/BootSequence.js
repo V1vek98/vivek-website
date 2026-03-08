@@ -32,7 +32,7 @@ export default function BootSequence({ onComplete }) {
           transition={{ duration: 0.5 }}
           className="fixed inset-0 z-[100] bg-[#0F172A] flex items-center justify-center"
         >
-          <div className="max-w-2xl w-full px-6">
+          <div className="max-w-2xl w-full px-6 relative">
             {/* SQL Query */}
             <div className="font-mono text-sm mb-6">
               <span className="text-accent-blue">mysql&gt; </span>
@@ -64,6 +64,14 @@ export default function BootSequence({ onComplete }) {
                 />
               </div>
             )}
+
+            {/* Skip button */}
+            <button
+              onClick={() => onComplete?.()}
+              className="absolute -bottom-16 left-1/2 -translate-x-1/2 text-gray-500 hover:text-gray-300 text-xs font-mono transition-colors"
+            >
+              skip &gt;&gt;
+            </button>
           </div>
         </motion.div>
       )}

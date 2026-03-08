@@ -24,20 +24,35 @@ export default function ExperienceSection() {
             <DataPipeline height={experiences.length * 350 + 300} />
           </div>
 
+          {/* Mobile timeline line */}
+          <div className="lg:hidden absolute left-4 top-0 bottom-0 w-0.5 bg-surface-tertiary" />
+
           {/* Experience cards */}
           <div className="space-y-8 lg:space-y-12">
-            {experiences.map((exp, i) => (
-              <div key={exp.id} className="lg:px-8">
-                <GitCommitCard
-                  data={exp}
-                  side={i % 2 === 0 ? 'left' : 'right'}
-                  index={i}
-                />
-              </div>
-            ))}
+            {experiences.map((exp, i) => {
+              const colors = ['#4285F4', '#EA4335', '#FBBC05', '#34A853'];
+              return (
+                <div key={exp.id} className="relative pl-10 lg:pl-0 lg:px-8">
+                  {/* Mobile timeline dot */}
+                  <div
+                    className="lg:hidden absolute left-2.5 top-6 w-3 h-3 rounded-full border-2 border-white shadow-sm"
+                    style={{ backgroundColor: colors[i % colors.length] }}
+                  />
+                  <GitCommitCard
+                    data={exp}
+                    side={i % 2 === 0 ? 'left' : 'right'}
+                    index={i}
+                  />
+                </div>
+              );
+            })}
 
             {/* Education - merge commit */}
-            <div className="lg:px-8">
+            <div className="relative pl-10 lg:pl-0 lg:px-8">
+              {/* Mobile timeline dot */}
+              <div
+                className="lg:hidden absolute left-2.5 top-6 w-3 h-3 rounded-full border-2 border-white shadow-sm bg-accent-blue"
+              />
               <GitCommitCard
                 data={education}
                 side={experiences.length % 2 === 0 ? 'left' : 'right'}

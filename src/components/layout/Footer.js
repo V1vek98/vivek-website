@@ -9,7 +9,7 @@ export default function Footer() {
         <p className="text-sm text-content-secondary mb-4">{builtWith}</p>
 
         {/* Journey */}
-        <div className="flex items-center justify-center gap-2 mb-4 text-xs text-content-tertiary font-mono">
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-4 text-xs text-content-tertiary font-mono">
           {journey.map((stop, i) => (
             <span key={stop.city} className="flex items-center gap-1">
               {i > 0 && <span className="text-content-tertiary/50 mx-1">&rarr;</span>}

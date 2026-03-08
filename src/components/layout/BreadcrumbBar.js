@@ -26,10 +26,10 @@ export default function BreadcrumbBar({ onSearchClick }) {
         </span>
         <button
           onClick={onSearchClick}
-          className="p-1 rounded hover:bg-surface-tertiary transition-colors text-content-tertiary"
+          className="p-2 sm:p-1 rounded hover:bg-surface-tertiary transition-colors text-content-tertiary"
           title="Search (Ctrl+K)"
         >
-          <Search size={14} />
+          <Search size={16} className="sm:w-3.5 sm:h-3.5" />
         </button>
       </div>
     </motion.div>

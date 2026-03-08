@@ -4,13 +4,15 @@ import { GitCommit } from 'lucide-react';
 export default function GitCommitCard({ data, side = 'left', isEducation = false, index = 0 }) {
   const { commitHash, commitTag, company, title, location, period, wittyLine, wittyDetail, achievements, technologies, metrics } = data;
 
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 1024;
+
   return (
     <motion.div
-      initial={{ opacity: 0, x: side === 'left' ? -30 : 30 }}
+      initial={{ opacity: 0, x: isMobile ? -20 : (side === 'left' ? -30 : 30) }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.15, duration: 0.6 }}
-      className={`relative max-w-lg ${side === 'right' ? 'ml-auto' : ''}`}
+      className={`relative w-full lg:max-w-lg ${side === 'right' ? 'lg:ml-auto' : ''}`}
     >
       {/* Timeline dot */}
       <div className={`absolute top-6 ${side === 'left' ? '-right-[2.05rem]' : '-left-[2.05rem]'} w-4 h-4 rounded-full bg-accent-blue border-4 border-white shadow-sm hidden lg:block`} />

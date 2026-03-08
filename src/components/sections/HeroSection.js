@@ -23,11 +23,11 @@ export default function HeroSection() {
       <BackgroundDecoration />
       <div className="absolute inset-0 dot-grid" />
       <Suspense fallback={null}>
-        <ParticleField count={35} />
+        <ParticleField count={typeof window !== 'undefined' && window.innerWidth < 768 ? 15 : 35} />
       </Suspense>
 
       <Container className="relative z-10">
-        <div className="grid lg:grid-cols-5 gap-12 items-center">
+        <div className="grid lg:grid-cols-5 gap-6 lg:gap-12 items-center">
           {/* Left - 60% */}
           <motion.div
             variants={staggerContainer}
@@ -51,13 +51,13 @@ export default function HeroSection() {
               "{personalInfo.tagline}"
             </motion.p>
 
-            <motion.div variants={staggerItem} className="flex flex-wrap gap-4 mt-8">
+            <motion.div variants={staggerItem} className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-8">
               <MagneticButton
                 as="a"
                 href="/dashboards"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-accent-blue text-white rounded-xl font-medium text-sm hover:shadow-lg hover:shadow-blue-200 transition-shadow"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent-blue text-white rounded-xl font-medium text-sm hover:shadow-lg hover:shadow-blue-200 transition-shadow w-full sm:w-auto"
               >
-                <Link to="/dashboards" className="flex items-center gap-2 text-white no-underline">
+                <Link to="/dashboards" className="flex items-center justify-center gap-2 text-white no-underline">
                   <BarChart3 size={18} />
                   View Live Dashboards
                 </Link>
@@ -68,7 +68,7 @@ export default function HeroSection() {
                 href={personalInfo.resumePath}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-white border border-surface-tertiary text-content-primary rounded-xl font-medium text-sm hover:shadow-lg transition-shadow"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white border border-surface-tertiary text-content-primary rounded-xl font-medium text-sm hover:shadow-lg transition-shadow w-full sm:w-auto"
               >
                 <Download size={18} />
                 Download .csv Resume

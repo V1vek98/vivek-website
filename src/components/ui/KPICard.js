@@ -14,7 +14,7 @@ export default function KPICard({ label, value, sparkData, trend = 'up', trendVa
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.1, duration: 0.5 }}
-      className="glass-card-hover p-4 rounded-xl group relative"
+      className="glass-card-hover active:scale-[0.98] p-4 rounded-xl group relative"
       title={tooltip}
     >
       <div className="flex items-center justify-between mb-1">
@@ -26,6 +26,7 @@ export default function KPICard({ label, value, sparkData, trend = 'up', trendVa
       </div>
       <div className="text-2xl font-bold text-content-primary mb-2" style={{ color }}>{value}</div>
       {sparkData && <MiniSparkline data={sparkData} color={color} />}
+      {tooltip && <span className="text-[10px] text-content-tertiary mt-1 block sm:hidden">{tooltip}</span>}
       <div
         className="absolute bottom-0 left-0 right-0 h-0.5 rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity"
         style={{ background: color }}

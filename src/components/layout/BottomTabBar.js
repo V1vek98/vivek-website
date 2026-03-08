@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import * as Icons from 'lucide-react';
 import { sidebarLinks } from '../../config/data';
 
-const tabs = sidebarLinks.slice(0, 5); // Show first 5 on mobile
+const tabs = sidebarLinks; // Show all 6 tabs
 
 export default function BottomTabBar() {
   const [activeSection, setActiveSection] = useState('hero');
@@ -36,11 +36,11 @@ export default function BottomTabBar() {
             <button
               key={id}
               onClick={() => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })}
-              className={`flex flex-col items-center gap-0.5 px-3 py-1 transition-colors ${
+              className={`flex flex-col items-center gap-0.5 px-2 py-1 transition-colors ${
                 isActive ? 'text-accent-blue' : 'text-content-tertiary'
               }`}
             >
-              <Icon size={20} />
+              <Icon size={18} />
               <span className="text-[10px] font-medium">{label}</span>
               {isActive && (
                 <motion.div

@@ -22,7 +22,7 @@ export default function AboutSection() {
           </div>
         </motion.div>
 
-        <div className="grid lg:grid-cols-5 gap-12 items-start">
+        <div className="grid lg:grid-cols-5 gap-6 lg:gap-12 items-start">
           {/* Left - Profile */}
           <motion.div
             variants={slideInLeft}

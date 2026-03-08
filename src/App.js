@@ -83,7 +83,7 @@ export default function App() {
             <BreadcrumbBar onSearchClick={() => setCommandPaletteOpen(true)} />
             <Sidebar />
 
-            <div className="dashboard-content pt-8">
+            <div className="dashboard-content pt-8 pb-16 lg:pb-0">
               <Suspense fallback={<div className="min-h-screen" />}>
                 <PageTransition>
                   <Routes>

@@ -14,7 +14,7 @@ export default function Section({ id, children, bg = 'default', className = '' }
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.6 }}
-      className={`py-20 md:py-28 ${bgVariants[bg] || bgVariants.default} ${className}`}
+      className={`py-12 sm:py-16 md:py-20 lg:py-28 ${bgVariants[bg] || bgVariants.default} ${className}`}
     >
       {children}
     </motion.section>

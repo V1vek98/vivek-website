@@ -136,7 +136,7 @@ export default function ProjectsSection() {
                 ))}
               </div>
 
-              <div className="grid grid-cols-3 gap-4 mb-6">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 mb-6">
                 {selectedProject.metrics.map((m) => (
                   <div key={m.label} className="text-center p-3 bg-surface-secondary rounded-lg">
                     <div className="text-2xl font-bold" style={{ color: selectedProject.color }}>{m.value}</div>

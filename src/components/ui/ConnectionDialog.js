@@ -37,9 +37,9 @@ export default function ConnectionDialog({ className = '' }) {
         <span className="text-xs text-content-tertiary font-mono ml-2">connection_config.yml</span>
       </div>
 
-      <div className="p-6">
+      <div className="p-4 sm:p-6">
         {/* Config grid */}
-        <div className="grid grid-cols-2 gap-4 mb-6 font-mono text-sm">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6 font-mono text-sm">
           <div>
             <span className="text-content-tertiary">host:</span>
             <span className="ml-2 text-content-primary">{d.host}</span>
@@ -63,7 +63,7 @@ export default function ConnectionDialog({ className = '' }) {
         </div>
 
         {/* Stats */}
-        <div className="flex gap-6 mb-6 text-sm">
+        <div className="flex flex-wrap gap-4 sm:gap-6 mb-6 text-sm">
           <div>
             <span className="text-content-tertiary">avg_response:</span>
             <span className="ml-2 text-content-primary font-mono">{d.avgResponse}</span>

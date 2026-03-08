@@ -98,7 +98,7 @@ export default function CommandPalette({ isOpen, onClose }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[80] flex items-start justify-center pt-[20vh]"
+          className="fixed inset-0 z-[80] flex items-start justify-center pt-[10vh] sm:pt-[20vh]"
           onClick={onClose}
         >
           <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
@@ -106,7 +106,7 @@ export default function CommandPalette({ isOpen, onClose }) {
             initial={{ opacity: 0, scale: 0.95, y: -10 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: -10 }}
-            className="relative bg-white rounded-xl shadow-2xl w-full max-w-lg overflow-hidden border border-surface-tertiary"
+            className="relative bg-white rounded-xl shadow-2xl w-full max-w-lg overflow-hidden border border-surface-tertiary mx-4 sm:mx-0"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Search input */}
@@ -119,7 +119,10 @@ export default function CommandPalette({ isOpen, onClose }) {
                 placeholder="Type a command..."
                 className="flex-1 bg-transparent outline-none text-sm text-content-primary placeholder:text-content-tertiary"
               />
-              <kbd className="text-xs px-1.5 py-0.5 bg-surface-tertiary rounded text-content-tertiary font-mono">ESC</kbd>
+              <kbd className="text-xs px-1.5 py-0.5 bg-surface-tertiary rounded text-content-tertiary font-mono hidden sm:inline-block">ESC</kbd>
+              <button onClick={onClose} className="sm:hidden p-1 rounded hover:bg-surface-tertiary transition-colors text-content-tertiary">
+                <span className="text-lg leading-none">&times;</span>
+              </button>
             </div>
 
             {/* Results */}
