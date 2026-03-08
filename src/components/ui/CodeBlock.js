@@ -57,7 +57,7 @@ export default function CodeBlock({ code, filename = 'vivek.py', typewriter = tr
 
   return (
     <motion.div
-      className={`rounded-xl overflow-hidden bg-[#0F172A] shadow-xl ${className}`}
+      className={`rounded-xl overflow-hidden bg-[#0F172A] shadow-xl max-w-full ${className}`}
       onViewportEnter={() => setInView(true)}
       viewport={{ once: true }}
     >

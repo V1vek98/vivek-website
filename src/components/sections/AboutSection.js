@@ -43,7 +43,7 @@ export default function AboutSection() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="lg:col-span-3"
+            className="lg:col-span-3 min-w-0"
           >
             <CodeBlock code={pythonClassBio} filename="vivek_patel.py" />
           </motion.div>
